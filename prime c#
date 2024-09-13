@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    public static void Main()
+    {
+        Console.Write("Choose Your Number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (IsPrime(number))
+        {
+            Console.WriteLine("Your Number is Prime");
+        }
+        else
+        {
+            Console.WriteLine("Your Number Is Not Prime");
+                }
+        
+    }
+    static bool IsPrime(int number)
+    {
+        if (number <= 1)
+        {
+            return false;
+        }
+        for (int t = 2; t <= Math.Sqrt(number); t++)
+        {
+            if (number % t == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
